@@ -7,10 +7,10 @@ slug: "hugo-building-guide"
 author: "Chelics"
 description: "搭建过程记录与心得"
 categories: ["工程实践"]
-tags: []
+tags: ["Hugo", "Github Actions"]
 comment: true
 toc: true
-draft: true
+draft: false
 ---
 为了搭建个人主页，我评估了目前主流的几种方案。
 
@@ -64,7 +64,7 @@ C. 保持项目骨架的“轻量化”
 
 ### 3. 核心配置修改
 
-按需配置`hugo.html`文件
+按需配置 `hugo.html`文件
 
 ```
 baseURL = 'https://your-username.github.io/'

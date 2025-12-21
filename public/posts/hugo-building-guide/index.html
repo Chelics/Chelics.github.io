@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <meta name="robots" content="noodp" />
     <title>如何利用Hugo搭建个人博客 - MY SPACE</title><meta name="author" content="Chelics">
-<meta name="description" content="搭建过程记录与心得">
+<meta name="description" content="搭建过程记录与心得"><meta name="keywords" content='Hugo, Github Actions'>
   <meta itemprop="name" content="如何利用Hugo搭建个人博客">
   <meta itemprop="description" content="搭建过程记录与心得">
   <meta itemprop="datePublished" content="2025-12-21T19:36:34+08:00">
   <meta itemprop="dateModified" content="2025-12-21T19:36:34+08:00">
   <meta itemprop="wordCount" content="1342">
-  <meta itemprop="keywords" content="工程实践"><meta property="og:url" content="http://localhost:1313/posts/hugo-building-guide/">
+  <meta itemprop="keywords" content="Hugo,Github Actions"><meta property="og:url" content="http://localhost:1313/posts/hugo-building-guide/">
   <meta property="og:site_name" content="MY SPACE">
   <meta property="og:title" content="如何利用Hugo搭建个人博客">
   <meta property="og:description" content="搭建过程记录与心得">
@@ -20,6 +20,8 @@
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-12-21T19:36:34+08:00">
     <meta property="article:modified_time" content="2025-12-21T19:36:34+08:00">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="Github Actions">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="如何利用Hugo搭建个人博客">
@@ -38,7 +40,7 @@
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "http:\/\/localhost:1313\/posts\/hugo-building-guide\/"
-    },"genre": "posts","wordcount":  1342 ,
+    },"genre": "posts","keywords": "Hugo, Github Actions","wordcount":  1342 ,
     "url": "http:\/\/localhost:1313\/posts\/hugo-building-guide\/","datePublished": "2025-12-21T19:36:34+08:00","dateModified": "2025-12-21T19:36:34+08:00","publisher": {
       "@type": "Organization",
       "name": ""},"author": {
@@ -78,8 +80,7 @@
   <article class="page single">
     <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>如何利用Hugo搭建个人博客</span>
       </h1></div><div class="post-meta">
-      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Chelics</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5/" class="post-category" title="分类 - 工程实践"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 工程实践</a></span></div><div class="post-meta-line"><span title="发布于 2025-12-21 19:36:34"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-12-21">2025-12-21</time></span>&nbsp;<span title="1342 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 1400 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 3 分钟</span>&nbsp;</div>
+      <div class="post-meta-line"><span class="post-author"><span class="author"><img class="avatar" src='https://github.com/Chelics.png' alt="Chelics" height="16" width="16">&nbsp;Chelics</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5/" class="post-category" title="分类 - 工程实践"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 工程实践</a></span></div><div class="post-meta-line"><span title="发布于 2025-12-21 19:36:34"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-12-21">2025-12-21</time></span>&nbsp;<span title="1342 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 1400 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden="true"></i>预计阅读 3 分钟</span>&nbsp;</div>
     </div><div class="details toc" id="toc-static" data-kept="false">
         <div class="details-summary toc-title">
           <span>目录</span>
@@ -152,7 +153,7 @@ git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt</code></p
   <a href="#3-%e6%a0%b8%e5%bf%83%e9%85%8d%e7%bd%ae%e4%bf%ae%e6%94%b9" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h3><p>按需配置<code>hugo.html</code>文件</p>
+</h3><p>按需配置 <code>hugo.html</code>文件</p>
 <pre tabindex="0"><code>baseURL = &#39;https://your-username.github.io/&#39;
 languageCode = &#39;zh-cn&#39;
 title = &#39;title-example&#39;
@@ -287,15 +288,15 @@ git push -u origin main</code></pre><h3 class="heading-element" id="7-规范化�
           </div></div><div class="post-info-line">
         <div class="post-info-md"><span><a href="vscode://file/C:%5cUsers%5cBannie%5cDesktop%5ccode%5cblog%5ccontent%5cposts%5chugo-building-guide.md" title="在编辑器中打开"target="_blank" rel="external nofollow noopener noreferrer" class="link-to-vscode">在编辑器中打开</a></span></div>
         <div class="post-info-share">
-          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="http://localhost:1313/posts/hugo-building-guide/" data-title="如何利用Hugo搭建个人博客"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
-  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/hugo-building-guide/"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
+          <span><a href="javascript:void(0);" title="分享到 X" data-sharer="twitter" data-url="http://localhost:1313/posts/hugo-building-guide/" data-title="如何利用Hugo搭建个人博客" data-hashtags="Hugo,Github Actions"><i class="fa-brands fa-x-twitter fa-fw" aria-hidden="true"></i></a>
+  <a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/hugo-building-guide/" data-hashtag="Hugo"><i class="fa-brands fa-facebook-square fa-fw" aria-hidden="true"></i></a>
   <a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/hugo-building-guide/" data-title="如何利用Hugo搭建个人博客"><i class="fa-brands fa-weibo fa-fw" aria-hidden="true"></i></a>
   </span>
         </div>
       </div></div>
 
   <div class="post-info-more">
-    <section class="post-tags"></section>
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/hugo/" class="post-tag" title="标签 - Hugo">Hugo</a><a href="/tags/github-actions/" class="post-tag" title="标签 - Github Actions">Github Actions</a></section>
     <section><span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
     </section>
   </div><div class="post-nav"><a href="/posts/8709a03/" class="post-nav-item" rel="prev" title="测试"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>测试</a></div>
@@ -333,7 +334,7 @@ git push -u origin main</code></pre><h3 class="heading-element" id="7-规范化�
     <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.153.1"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.4.0-alpha.3-20251220152055-051f45a7"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
         </div><div class="footer-line copyright" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
             <span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">
-              <a href="/">你的名字</a></span></div></div>
+              <a href="/">Chelics</a></span></div></div>
   </footer></div><div class="widgets"><div class="fixed-buttons"><div class="fixed-button back-to-top animate__faster d-none" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><svg viewBox="0 0 100 100">
               <circle class="bg" cx="50" cy="50" r="50"></circle>
               <circle class="progress" cx="50" cy="50" r="50"></circle>
