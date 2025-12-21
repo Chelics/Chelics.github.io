@@ -36,6 +36,20 @@ hasCJKLanguage = true
     enable = true
     scrollpercent = true # 在回到顶部按钮上显示阅读百分比
 
+  # 5. 文章页面全局配置
+    [params.page]
+    # 是否在所有文章中默认开启目录
+    [params.page.toc]
+      enable = true
+      # 是否保持目录在正文上方 (true) 还是固定在侧边栏 (false)
+      keepStatic = false
+      # 是否自动收纳目录
+      auto = true
+    # 是否开启代码复制按钮
+    [params.page.code]
+      copy = true
+      maxLines = 10
+
 [menu]
   [[menu.main]]
     identifier = "posts"
