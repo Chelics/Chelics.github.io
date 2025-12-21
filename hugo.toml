@@ -12,10 +12,9 @@ hasCJKLanguage = true
 
   # 1. 作者信息配置 (显示在侧边栏或底部)
   [params.author]
-    name = "你的名字"
+    name = "Chelics"
     email = "youremail@example.com"
-    # 头像图片放在根目录的 static/images/avatar.webp
-    avatar = "/images/avatar.webp" 
+    avatar = "https://github.com/Chelics.png" 
 
   # 2. 顶栏配置
   [params.header]
