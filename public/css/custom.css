@@ -351,6 +351,48 @@ a:active, button:active {
 }
 
 /* ============================================
+   Solarized Light 语法高亮配色
+   通过 SCSS 变量覆盖主题默认值
+   ============================================ */
+
+/* SCSS 变量覆盖 - Solarized Light 配色 */
+:root {
+  --chroma-k: #859900;    /* keyword - 绿色 */
+  --chroma-kc: #859900;   /* keyword constant - 绿色 */
+  --chroma-kd: #859900;   /* keyword declaration - 绿色 */
+  --chroma-kn: #dc322f;   /* keyword namespace - 红色 */
+  --chroma-kp: #859900;   /* keyword pseudo - 绿色 */
+  --chroma-kr: #859900;   /* keyword reserved - 绿色 */
+  --chroma-kt: #859900;   /* keyword type - 绿色 */
+  --chroma-ow: #dc322f;   /* operator word - 红色 */
+  --chroma-n: #268bd2;    /* name - 蓝色 */
+  --chroma-na: #268bd2;   /* name attribute - 蓝色 */
+  --chroma-nb: #cb4b16;   /* name builtin - 橙色 */
+  --chroma-bp: #cb4b16;   /* name builtin pseudo - 橙色 */
+  --chroma-nc: #cb4b16;   /* name class - 橙色 */
+  --chroma-ne: #268bd2;   /* name exception - 蓝色 */
+  --chroma-nf: #268bd2;   /* name function - 蓝色 */
+  --chroma-nl: #268bd2;   /* name label - 蓝色 */
+  --chroma-nn: #268bd2;   /* name namespace - 蓝色 */
+  --chroma-nt: #cb4b16;   /* name tag - 橙色 */
+  --chroma-nv: #268bd2;   /* name variable - 蓝色 */
+  --chroma-s: #2aa198;    /* literal string - 青色 */
+  --chroma-m: #2aa198;    /* literal number - 青色 */
+  --chroma-c: #93a1a1;    /* comment - 灰色斜体 */
+  --chroma-l: #2aa198;    /* literal - 青色 */
+}
+
+/* 直接覆盖 Chroma token 颜色 */
+.highlight .chroma .k, .highlight .chroma .kc, .highlight .chroma .kd, .highlight .chroma .kp, .highlight .chroma .kr, .highlight .chroma .kt { color: #859900 !important; }
+.highlight .chroma .kn, .highlight .chroma .ow { color: #dc322f !important; font-weight: bold; }
+.highlight .chroma .n, .highlight .chroma .na, .highlight .chroma .no, .highlight .chroma .nd, .highlight .chroma .ni, .highlight .chroma .ne, .highlight .chroma .nl, .highlight .chroma .nn, .highlight .chroma .nx, .highlight .chroma .py, .highlight .chroma .nv, .highlight .chroma .vc, .highlight .chroma .vg, .highlight .chroma .vi, .highlight .chroma .vm, .highlight .chroma .nf, .highlight .chroma .fm { color: #268bd2 !important; }
+.highlight .chroma .nb, .highlight .chroma .bp, .highlight .chroma .nc, .highlight .chroma .nt { color: #cb4b16 !important; font-weight: bold; }
+.highlight .chroma .l, .highlight .chroma .ld, .highlight .chroma .s, .highlight .chroma .sa, .highlight .chroma .sb, .highlight .chroma .sc, .highlight .chroma .dl, .highlight .chroma .sd, .highlight .chroma .s2, .highlight .chroma .se, .highlight .chroma .sh, .highlight .chroma .si, .highlight .chroma .sx, .highlight .chroma .sr, .highlight .chroma .s1, .highlight .chroma .ss, .highlight .chroma .m, .highlight .chroma .mb, .highlight .chroma .mf, .highlight .chroma .mh, .highlight .chroma .mi, .highlight .chroma .il, .highlight .chroma .mo { color: #2aa198 !important; font-weight: bold; }
+.highlight .chroma .c, .highlight .chroma .ch, .highlight .chroma .cm, .highlight .chroma .c1, .highlight .chroma .cs, .highlight .chroma .cp, .highlight .chroma .cpf { color: #93a1a1 !important; font-style: italic; }
+.highlight .chroma .lnt { color: #7f7f7f !important; }
+.highlight .chroma .hl { background-color: #d6d0bf !important; }
+
+/* ============================================
    文章页面 - 引用块样式
    ============================================ */
 

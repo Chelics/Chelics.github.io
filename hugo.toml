@@ -6,6 +6,13 @@ theme = 'FixIt'
 # 开启强制中文支持，优化搜索和字数统计
 hasCJKLanguage = true
 
+# 语法高亮配置
+[markup.highlight]
+noClasses = true
+lineNos = false
+guessSyntax = false
+style = "solarized-light"
+
 [params]
   # 默认主题模式 ("light", "dark", "auto")
   defaultTheme = "auto"

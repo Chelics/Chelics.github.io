@@ -22,7 +22,7 @@ draft: false
 
 在 Windows 环境下，由于 FixIt 主题依赖 SCSS 编译，必须安装 Extended 版本的 Hugo。
 
-```
+```shell
 # 使用 winget 安装扩展版 Hugo
 winget install Hugo.Hugo.Extended
 
@@ -34,7 +34,7 @@ hugo version
 
 其实在选择主题的时候, 我也有看到很多大佬个性化的主题, 在Hugo的基础上改得非常好看, 但是为了掌控站点架构, 我还是选择从零构建项目骨架。先做起来, 等到后面有需要的时候, 再对样式进行美化。
 
-```
+```shell
 # 1. 创建站点
 hugo new site my-blog --format toml
 cd my-blog
@@ -66,7 +66,7 @@ C. 保持项目骨架的“轻量化”
 
 按需配置 `hugo.html`文件
 
-```
+```toml
 baseURL = 'https://your-username.github.io/'
 languageCode = 'zh-cn'
 title = 'title-example'
@@ -82,7 +82,7 @@ hasCJKLanguage = true
 
 #### 新建页面
 
-```
+```shell
 # 新建第一篇博文
 hugo new posts/first-blog.md
 
@@ -92,7 +92,7 @@ hugo new about/index.md
 
 #### 本地调试预览
 
-```
+```shell
 # -D 参数用于预览包含 draft = true 的草稿
 hugo server -D
 ```
@@ -103,7 +103,7 @@ hugo server -D
 
 在 `.github/workflows/` 下创建 `deploy.yaml` 文件：
 
-```
+```yaml
 name: Deploy Hugo site to Pages
 on:
   push:
@@ -133,7 +133,7 @@ jobs:
 
 然后在本地项目目录下:
 
-```
+```shell
 # 关联远程 GitHub 仓库
 git remote add origin https://github.com/你的用户名/你的用户名.github.io.git
 git branch -M main
