@@ -1,0 +1,388 @@
+/* ============================================
+   简约高级感 - 自定义增强样式
+   ============================================ */
+
+/* 渐变背景 */
+:root {
+    --home-bg-gradient: linear-gradient(135deg, #667eea11 0%, #764ba211 100%);
+}
+
+body {
+    background: var(--home-bg-gradient);
+}
+
+/* 主页容器 - 增加留白 */
+.home .profile-card {
+    padding: 3rem 2rem;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* 头像样式 - 呼吸光效 */
+.home .profile-card .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.1),
+        0 0 30px rgba(102, 126, 234, 0.3),
+        0 0 60px rgba(118, 75, 162, 0.2);
+    transition: all 0.5s ease;
+}
+
+.home .profile-card .avatar:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.15),
+        0 0 40px rgba(102, 126, 234, 0.5),
+        0 0 80px rgba(118, 75, 162, 0.3);
+}
+
+/* 标题样式 */
+.home .profile-card .title {
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #2c3e50 0%, #4a5568 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+[data-theme="dark"] .home .profile-card .title {
+    background: linear-gradient(135deg, #e2e8f0 0%, #a0aec0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* 副标题打字机 */
+.home .profile-card .subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    opacity: 0.7;
+    margin-top: 0.5rem;
+}
+
+/* 文章卡片 - 简约风格 */
+.home.posts .summary {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.home.posts .summary:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(102, 126, 234, 0.3);
+    transform: translateY(-2px);
+}
+
+[data-theme="dark"] .home.posts .summary {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] .home.posts .summary:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* 文章标题 */
+.home .summary .single-title {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--link-color);
+    margin-bottom: 0.75rem;
+}
+
+.home .summary .single-title a {
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.home .summary .single-title a:hover {
+    border-bottom-color: var(--link-color);
+}
+
+/* 文章摘要 */
+.home .summary .content p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.75;
+    line-height: 1.7;
+}
+
+/* 文章元信息 */
+.home .summary .post-meta {
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+/* 淡化 footer */
+.footer {
+    opacity: 0.4;
+    font-size: 0.8rem;
+}
+
+/* ============================================
+   顶部导航栏 - 动态主题效果
+   ============================================ */
+
+/* 导航栏背景 - 磨砂玻璃效果 */
+#header-desktop .header-wrapper {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] #header-desktop .header-wrapper {
+    background: rgba(30, 30, 30, 0.8);
+}
+
+/* 滚动时导航栏阴影 */
+#header-desktop .header-wrapper:hover {
+    box-shadow: 0 4px 30px rgba(102, 126, 234, 0.15);
+}
+
+/* 导航链接 - hover 光效 */
+#header-desktop .menu-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#header-desktop .menu-link:hover {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.15), rgba(118, 75, 162, 0.15));
+    color: #667eea;
+}
+
+[data-theme="dark"] #header-desktop .menu-link:hover {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.25), rgba(118, 75, 162, 0.25));
+    color: #a5b4fc;
+}
+
+/* 导航链接下划线动画 */
+#header-desktop .menu-link::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+#header-desktop .menu-link:hover::after {
+    width: 60%;
+}
+
+/* 主题切换按钮 */
+#header-desktop .theme-switch {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#header-desktop .theme-switch:hover {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.2));
+    transform: rotate(15deg);
+}
+
+/* 标题图标动画 */
+#header-desktop .header-title-text {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ============================================
+   底部 Footer - 动态效果
+   ============================================ */
+
+/* Footer 磨砂效果 */
+.footer {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem 0;
+}
+
+[data-theme="dark"] .footer {
+    background: rgba(30, 30, 30, 0.6);
+}
+
+/* Footer 链接 hover */
+.footer a {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    opacity: 0.8;
+}
+
+/* Hugo/主题图标动画 */
+.footer .hugo-icon,
+.footer .fixit-icon {
+    transition: transform 0.3s ease;
+}
+
+.footer a:hover .hugo-icon,
+.footer a:hover .fixit-icon {
+    transform: scale(1.1);
+}
+
+/* ============================================
+   自定义鼠标样式
+   ============================================ */
+
+/* 默认光标样式 */
+* {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'><polygon points='0,0 0,14 4,10 7,16 9,15 6,9 11,9' fill='%23333' stroke='%23fff' stroke-width='0.5'/> </svg>") 0 0, default;
+}
+
+/* 链接和按钮 - 使用自定义光标 */
+a, button, .menu-link, .post-tag, .btn {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><circle cx='12' cy='12' r='4' fill='%23666' stroke='%23fff' stroke-width='1'/></svg>") 12 12, pointer;
+}
+
+/* 点击状态 */
+a:active, button:active {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><circle cx='12' cy='12' r='6' fill='%23333' stroke='%23fff' stroke-width='1'/></svg>") 12 12, pointer;
+}
+
+/* ============================================
+   自定义滚动条
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+  border-radius: 3px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5a6fd6, #6a4190) !important;
+}
+
+/* ============================================
+   文章页面 - 代码块样式（简约高级感）
+   ============================================ */
+
+.content pre {
+    background: transparent !important;
+    border: 1px solid rgba(128, 128, 128, 0.2) !important;
+    border-radius: 8px !important;
+    padding: 1rem 1.25rem !important;
+    margin: 1.5rem 0 !important;
+    overflow-x: auto;
+    border-left: 3px solid #667eea !important;
+}
+
+.content pre:hover {
+    border-left-color: #764ba2 !important;
+}
+
+[data-theme="dark"] .content pre {
+    background: rgba(255, 255, 255, 0.02) !important;
+}
+
+/* 代码块内代码 - 使用更精确的选择器覆盖主题 */
+.content pre.chroma,
+.content pre {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Source Code Pro', Consolas, Monaco, monospace !important;
+    font-size: 0.85rem !important;
+}
+
+.content pre.chroma code,
+.content pre code {
+    font-family: inherit !important;
+}
+
+/* 行内代码 */
+.content :not(pre) > code {
+    background: rgba(102, 126, 234, 0.08) !important;
+    color: #667eea !important;
+    padding: 0.15em 0.4em !important;
+    border-radius: 4px !important;
+    font-size: 0.875em !important;
+}
+
+[data-theme="dark"] .content :not(pre) > code {
+    color: #a5b4fc !important;
+}
+
+/* 代码复制按钮 */
+.content .code-copy-btn {
+    background: rgba(102, 126, 234, 0.1) !important;
+    border-radius: 4px !important;
+}
+
+.content .code-copy-btn:hover {
+    background: rgba(102, 126, 234, 0.25) !important;
+}
+
+/* ============================================
+   文章页面 - 引用块样式
+   ============================================ */
+
+.content blockquote {
+    border-left: none !important;
+    margin: 1.5rem 0 !important;
+    padding: 1rem 1.5rem !important;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08), rgba(118, 75, 162, 0.08)) !important;
+    border-radius: 0 12px 12px 0 !important;
+    border-left: 4px solid !important;
+    border-image: linear-gradient(180deg, #667eea, #764ba2) 1 !important;
+    position: relative !important;
+}
+
+.content blockquote::before {
+    content: '"' !important;
+    position: absolute !important;
+    top: 0.5rem !important;
+    left: 1rem !important;
+    font-size: 3rem !important;
+    color: rgba(102, 126, 234, 0.2) !important;
+    font-family: Georgia, serif !important;
+    line-height: 1 !important;
+}
+
+.content blockquote p {
+    color: var(--text-color) !important;
+    font-style: italic !important;
+    margin: 0 !important;
+    padding-left: 1rem !important;
+}
+
+[data-theme="dark"] .content blockquote {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.12), rgba(118, 75, 162, 0.12)) !important;
+}

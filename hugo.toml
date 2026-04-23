@@ -10,6 +10,22 @@ hasCJKLanguage = true
   # 默认主题模式 ("light", "dark", "auto")
   defaultTheme = "auto"
 
+  # 首页个人介绍卡片
+  [params.home.profile]
+    enable = true
+    gravatarEmail = ""
+    avatarURL = "https://github.com/Chelics.png"
+    title = "Chelics"
+    subtitle = "Stay curious, stay building."
+    typeit = true
+    social = false
+    disclaimer = ""
+
+  # 社交链接配置
+  [params.social]
+    GitHub = "Chelics"
+    email = "youremail@example.com"
+
   # 1. 作者信息配置 (显示在侧边栏或底部)
   [params.author]
     name = "Chelics"
@@ -35,8 +51,12 @@ hasCJKLanguage = true
     enable = true
     scrollpercent = true # 在回到顶部按钮上显示阅读百分比
 
+# 自定义 CSS
+  [params.page.library.css]
+    custom = "css/custom.css"
+
   # 5. 文章页面全局配置
-    [params.page]
+  [params.page]
     # 是否在所有文章中默认开启目录
     [params.page.toc]
       enable = true

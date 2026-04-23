@@ -4,7 +4,7 @@
     <title>所有文章 - MY SPACE</title>
     <link>http://localhost:1313/posts/</link>
     <description>MY SPACE</description>
-    <generator>Hugo 0.153.1 &amp; FixIt v0.4.0-alpha.3-20251220152055-051f45a7</generator>
+    <generator>Hugo 0.147.4 &amp; FixIt v0.4.0-alpha.3-20251220152055-051f45a7</generator>
     <language>zh-cn</language>
     <managingEditor>youremail@example.com (Chelics)</managingEditor>
     <webMaster>youremail@example.com (Chelics)</webMaster>
@@ -17,13 +17,6 @@
       <guid>http://localhost:1313/posts/hugo-building-guide/</guid>
       <category domain="http://localhost:1313/categories/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5/">工程实践</category>
       <description>&lt;p&gt;为了搭建个人主页，我评估了目前主流的几种方案。&lt;/p&gt;&#xA;&lt;p&gt;考虑到第三方平台在内容管理上的局限性，以及部分静态框架（如 Hexo）在编译速度和依赖维护上的成本, 经过对比，本人最终选择利用 Hugo 来搭建博客系统。&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>测试</title>
-      <link>http://localhost:1313/posts/8709a03/</link>
-      <pubDate>Sun, 21 Dec 2025 10:55:44 +0800</pubDate><author>youremail@example.com (Chelics)</author>
-      <guid>http://localhost:1313/posts/8709a03/</guid>
-      <description>测试</description>
     </item>
   </channel>
 </rss>
